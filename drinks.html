@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thursday Cafe - Drinks</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.gif" type="image/gif">
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background: url('images/bg.jpg') no-repeat center / cover;
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7); 
+            z-index: -1;
+        }
+        .header-border {
+            border-bottom: 2px solid #6b4423;
+            padding-bottom: 10px;
+        }
+        .footer-border {
+            border-top: 2px solid #6b4423;
+            padding-top: 10px;
+        }
+        .logo-image {
+            height: 100px;
+            vertical-align: middle;
+            margin-right: 15px;
+            border-radius: 50%;
+        }
+        .inline-heading {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+        }
+        .card-title {
+            font-size: 1.2rem;
+        }
+        .card-text {
+            font-size: 1rem;
+            color: #555;
+        }
+        .btn-primary {
+            background-color: #6b4423;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #8a5630;
+        }
+        .navbar-custom {
+            background: linear-gradient(45deg, #8a5630, #6b4423);
+            border-radius: 15px;
+            padding: 10px 20px;
+        }
+        .navbar-custom .navbar-nav .nav-link {
+            color: white;
+            margin: 0 10px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+        .navbar-custom .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+        .navbar-custom .navbar-brand {
+            color: white;
+            font-weight: bold;
+        }
+        .navbar-custom .navbar-toggler {
+            border-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div> <!-- Semi-transparent overlay -->
+    
+    <header class="header-border text-center bg-white bg-opacity-75 p-3">
+        <img src="images/logo.png" alt="Vitaly Tea Logo" class="logo-image" style="height: 50px; margin-bottom:10px;"> 
+        <h1 class="inline-heading" style="color:#fd7e14;">Thursday Cafe</h1>
+    </header>
+    
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-custom mt-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Thursday</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cakes.html">Cakes</a>
+                        </li>                 
+                        <li class="nav-item">
+                            <a class="nav-link" href="drinks.html">Drinks</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cart.html">Cart</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section id="drinks">
+            <h2 class="my-5 text-center">Our Drinks</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="images/drinks1.jpg" class="card-img-top product-image" alt="Drink 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Artisanal Coffee</h5>
+                            <p class="card-text">₱180.00</p>
+                            <button class="btn btn-primary add-to-cart" data-product="Artisanal Coffee" data-price="180.00">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="images/drinks2.png" class="card-img-top product-image" alt="Drink 2">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Soothing Tea</h5>
+                            <p class="card-text">₱135.00</p>
+                            <button class="btn btn-primary add-to-cart" data-product="Soothing Tea" data-price="135.00">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="images/drinks4.jpg" class="card-img-top product-image" alt="Drink 3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Refreshing Iced Drink</h5>
+                            <p class="card-text">₱360.00</p>
+                            <button class="btn btn-primary add-to-cart" data-product="Refreshing Iced Drink" data-price="360.00">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Additional drinks -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://wholefoodsoulfoodkitchen.com/wp-content/uploads/2022/07/frozen-berry-smoothie-4-1.jpg" class="card-img-top product-image" alt="Drink 4">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Berry Smoothie</h5>
+                            <p class="card-text">₱250.00</p>
+                            <button class="btn btn-primary add-to-cart" data-product="Berry Smoothie" data-price="250.00">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://www.simplyrecipes.com/thmb/4LFrc9hSMoKErr2WI7tThcnvWwA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Perfect-Lemonade-LEAD-08-B-441ceb568f854bb485dbed79e082bb4a.jpg" class="card-img-top product-image" alt="Drink 5">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Lemonade</h5>
+                            <p class="card-text">₱120.00</p>
+                            <button class="btn btn-primary add-to-cart" data-product="Lemonade" data-price="120.00">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://www.acouplecooks.com/wp-content/uploads/2021/06/Green-Juice-Recipe-007.jpg" class="card-img-top product-image" alt="Drink 6">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Green Juice</h5>
+                            <p class="card-text">₱200.00</p>
+                            <button class="btn btn-primary add-to-cart" data-product="Green Juice" data-price="200.00">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-border text-center mt-4 bg-white bg-opacity-75 p-3 rounded">
+            <p class="mb-0">&copy; 2024 Thursday Cafe. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.add-to-cart').click(function () {
+                const product = $(this).data('product');
+                const price = parseFloat($(this).data('price'));
+                
+                let cart = JSON.parse(localStorage.getItem('cart')) || {};
+                
+                if (cart[product]) {
+                    cart[product].quantity += 1;
+                } else {
+                    cart[product] = { price: price, quantity: 1 };
+                }
+                
+                localStorage.setItem('cart', JSON.stringify(cart));
+                window.location.href = 'cart.html'; 
+            });
+        });
+    </script>
+</body>
+</html>
+
